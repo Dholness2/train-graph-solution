@@ -53,7 +53,7 @@ public class TrainRouteReport {
     String result;
     if (weight == -1) {
       result = "OutPut: NO SUCH ROUTE";
-    }else {
+    } else {
       result = "OutPut: " + weight;
     }
     return result;
@@ -72,7 +72,7 @@ public class TrainRouteReport {
     int stopLimit = Character.getNumericValue(path.charAt(DISTANCE_INDEX));
     return analyzer.pathCount(start,end, stopLimit);
   }
-  
+
   private void reportRouteCountDistanceExact() {
     for (String path : config.get(ROUTES_STOPS_EXACT)) {
       this.outputCount++;
