@@ -44,15 +44,13 @@ Output #10: 7
  
  
  # Design Summary
- This is a simple terminal application. The main functionalities are separated into Four high-level components. A graph file parser,a train route report, graph analyzer and finally a display component. Each high-level class manages a single concern for the application.This submission adheres to SOlID design principles via a TDD approach. Some classes feature dependencies, mostly data structures that require specific implementations to guarantee performance.The ShortesPaths class Implements Dijkstra's Algorithm depending on an Index Mini priority Queue to provide optimized performance. Outside of hat example, the high-level modules depend on abstractions Such as Graph, Edge,and Display interfaces, rather than concrete implementations. All with a goal to craft code that is agile and easy to change.
+ This is a simple terminal application. The main functionalities are separated into five high-level components. A graph file parser,a train route report, graph analyzer, shortest path finder and finally a display component. Each high-level class manages a single concern for the application.This submission adheres to SOlID design principles via a TDD approach. Some classes feature dependencies, mostly data structures that require specific implementations to guarantee performance.The ShortesPaths class Implements Dijkstra's Algorithm depending on an Index Mini priority Queue to provide optimized performance. Outside of that example, the high-level modules depend on abstractions Such as Graph, Edge,and Display interfaces, rather than concrete implementations. All with a goal to craft code that is agile and easy to change.
  
  # Data Structures
  The Directed Graph is implemented via an AdjacenyList to provide effective traversing of the graph. The Edges are directed    with weight attributes and node index references of both start and end points.
 
 The indexed min queue implementation uses a binary heap along with an array to bind keys with integers in the given range.
  *  The insert and delete-min key values operations take logarithmic time.
- *  The finding the min-index or  min-key operations take constant time.
- 
- 
- 
+ *  The finding the min operations take constant time.
+
  #Next Steps
