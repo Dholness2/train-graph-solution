@@ -19,7 +19,7 @@ public class GraphShortestPath {
 		this.indexKeys = graph.getIndexKeyMap();
 		this.disTo = new int [graph.getVertexCount()];
 		this.edgeTo = new WeightedEdge[graph.getVertexCount()];
-    }
+  }
 
 	public int ShortestPathfromSourceToNode(String start, String end) {
 		this.source = indexKeys.get(start);

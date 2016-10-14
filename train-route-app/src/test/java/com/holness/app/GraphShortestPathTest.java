@@ -61,5 +61,4 @@ public class GraphShortestPathTest {
 		double expectedLength = 9.0;
 		assertTrue(expectedLength == length);
 	}
-
 }

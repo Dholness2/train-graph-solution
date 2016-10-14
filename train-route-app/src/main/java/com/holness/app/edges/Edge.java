@@ -1,11 +1,11 @@
 package com.holness.app.edges;
 
 public interface Edge {
-	public int getStartPoint();
+  public int getStartPoint();
 
-	public int getEndPoint();
+  public int getEndPoint();
 
-	public boolean isWeighted();
-	
-	public int getWeight();
+  public boolean isWeighted();
+
+  public int getWeight();
 }

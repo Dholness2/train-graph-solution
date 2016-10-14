@@ -5,16 +5,16 @@ import java.util.ArrayList;
 import java.util.HashMap;
 
 public interface Graph {
-	public void addEdge(Edge e);
+  public void addEdge(Edge e);
 
-	public int getVertexCount();
+  public int getVertexCount();
 
-	public ArrayList<Edge>[] getEdges();
+  public ArrayList<Edge>[] getEdges();
 
-	public ArrayList<Edge> getAdjacentList(int node);
+  public ArrayList<Edge> getAdjacentList(int node);
 
-	public void setVertexIndexKeys(HashMap<String, Integer> vertexIndexes);
+  public void setVertexIndexKeys(HashMap<String, Integer> vertexIndexes);
 
-	public HashMap<String, Integer> getIndexKeyMap();
+  public HashMap<String, Integer> getIndexKeyMap();
 
 }
