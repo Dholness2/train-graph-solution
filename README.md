@@ -40,17 +40,31 @@ Output #7: 3
 Output #8: 9
 Output #9: 9
 Output #10: 7
- ========== 
  
  
- # Design Summary
+ 
+ ###Design Summary
  This is a simple terminal application. The main functionalities are separated into five high-level components. A graph file parser,a train route report, graph analyzer, shortest path finder and finally a display component. Each high-level class manages a single concern for the application.This submission adheres to SOlID design principles via a TDD approach. Some classes feature dependencies, mostly data structures that require specific implementations to guarantee performance.The ShortesPaths class Implements Dijkstra's Algorithm depending on an Index Mini priority Queue to provide optimized performance. Outside of that example, the high-level modules depend on abstractions Such as Graph, Edge,and Display interfaces, rather than concrete implementations. All with a goal to craft code that is agile and easy to change.
  
- # Data Structures
+ ###Data Structures
  The Directed Graph is implemented via an AdjacenyList to provide effective traversing of the graph. The Edges are directed    with weight attributes and node index references of both start and end points.
 
 The indexed min queue implementation uses a binary heap along with an array to bind keys with integers in the given range.
  *  The insert and delete-min key values operations take logarithmic time.
  *  The finding the min operations take constant time.
 
- #Next Steps
+ ###To Run App
+    1. cd train-route-app
+    2. mvn package
+    3. java -cp target/train-route-app-1.0-SNAPSHOT.jar com.holness.app.App
+ 
+ ####To Run test 
+    1. cd train-route-app
+    2. mvn clean test
+   
+ #Requirments
+ Junit 4.11
+ Apache Maven 3.3.3
+ Java version: 1.8.0_102, vendor: Oracle Corporation
+ 
+    
