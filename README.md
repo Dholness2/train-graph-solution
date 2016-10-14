@@ -53,4 +53,17 @@ The indexed min queue implementation uses a binary heap along with an array to b
  *  The insert and delete-min key values operations take logarithmic time.
  *  The finding the min operations take constant time.
 
- #Next Steps
+ #To Run App
+    1. cd train-route-app
+    2. mvn package
+    3. java -cp target/train-route-app-1.0-SNAPSHOT.jar com.holness.app.App
+ #To Run test 
+    1.cd train-route-app
+    2. mvn clean test
+   
+ # Requirments
+ Junit 4.11
+ Apache Maven 3.3.3
+ Java version: 1.8.0_102, vendor: Oracle Corporation
+ 
+    
