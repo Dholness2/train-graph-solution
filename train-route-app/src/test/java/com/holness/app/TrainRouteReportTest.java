@@ -27,6 +27,7 @@ public class TrainRouteReportTest {
     String [] routeCountExactStops  = {"CC4"};
     String [] shortestPaths = {"AC"};
     String [] shortestPathCycles ={"BB"};
+    String [] routeCountDistancesMaxCycle = {"CC30"};
 
     HashMap <String, String[]> reportConfig = new HashMap<String,String[]>();
     reportConfig.put("routeDistances", routeDistances);
@@ -34,6 +35,7 @@ public class TrainRouteReportTest {
     reportConfig.put("routeCountExactStops", routeCountExactStops);
     reportConfig.put("shortestPaths",shortestPaths);
     reportConfig.put("shortestPathCycles", shortestPathCycles);
+    reportConfig.put("routeCountDistancesMaxCycle", routeCountDistancesMaxCycle);
     return reportConfig;
   }
 
@@ -50,8 +52,7 @@ public class TrainRouteReportTest {
 	public void testFindsPathDistanceForSet() {
 	 testReport.run();
    String result = displayMock.getOutput();
-   String [] expectedResults= { "1.OutPut:9","2.OutPut:5","3.OutPut:13","4.OutPut:22",
-       "5.OutPut: NO SUCH ROUTE","6.Output: 2","7.Output: 1","8.Output: 9.0","9.Output: 9.0" };
+   String [] expectedResults= { "9","5","13","22","NO SUCH ROUTE","2","3","9","9","7" };
 	 for(String expected: expectedResults) {
      assertTrue(result.contains(expected));
 	 }

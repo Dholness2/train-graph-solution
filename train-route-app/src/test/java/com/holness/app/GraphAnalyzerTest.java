@@ -79,7 +79,7 @@ public class GraphAnalyzerTest {
 		int length = 4;
 		String startVertex = "A";
 		String endvertex = "C";
-		int resultCount =  testAnalyzer.pathCountExact(startVertex, endvertex, length);
+		int resultCount = testAnalyzer.pathCountExact(startVertex, endvertex, length);
 		int expectedCount = 3;
 		assertEquals(expectedCount, resultCount);
 	}
@@ -90,11 +90,8 @@ public class GraphAnalyzerTest {
 		int pathWeightLimit = 30;
 	    String startVertex = "C";
 		String endvertex = "C";
-		int resultCount =  testAnalyzer.pathCountWeightLimit(startVertex, endvertex, pathWeightLimit);
+		int resultCount = testAnalyzer.pathCountWeightLimit(startVertex, endvertex, pathWeightLimit);
 		int expectedCount = 7;
 		assertEquals(expectedCount, resultCount);
 	}
-	
-	
-
 }

@@ -14,10 +14,10 @@ public class App {
   public static final String DEFAULT_PATH  = "src/main/java/com/holness/app/SampleData.txt";
 	public static String routeDistances [] = {"A-B-C","A-D","A-D-C","A-E-B-C-D","A-E-D"};
 	public static String [] routeCountDistancesMax = {"CC3"};
-	public static String [] routeCountExactStops = {"CC4"};
+	public static String [] routeCountExactStops = {"AC4"};
 	public static String [] shortestPaths = {"AC"};
 	public static String [] shortestPathCycles ={"BB"};
-
+  public static String [] routeCountDistancesMaxCycle = {"CC30"};
   public static void main( String[] args ) throws Exception {
 
     HashMap <String, String[]> reportConfig = new HashMap<String,String[]>();
@@ -26,8 +26,9 @@ public class App {
     reportConfig.put("routeCountExactStops", routeCountExactStops);
     reportConfig.put("shortestPaths",shortestPaths);
     reportConfig.put("shortestPathCycles", shortestPathCycles);
+    reportConfig.put("routeCountDistancesMaxCycle", routeCountDistancesMaxCycle);
 
-    String path =  (args[0] != null) ? args[0] : DEFAULT_PATH;
+    String path = DEFAULT_PATH;
     GraphParser parser = new GraphParser(path);
     GraphAnalyzer analyzer = new GraphAnalyzer(parser.getGraph());
     GraphShortestPath sp = new GraphShortestPath(parser.getGraph());

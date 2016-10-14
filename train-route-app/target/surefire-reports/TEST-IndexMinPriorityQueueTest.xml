@@ -62,10 +62,10 @@
     <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="sun.cpu.isalist" value=""/>
   </properties>
-  <testcase classname="IndexMinPriorityQueueTest" name="testSortElementsFromLowestoHigest" time="0.001"/>
+  <testcase classname="IndexMinPriorityQueueTest" name="testSortElementsFromLowestoHigest" time="0"/>
   <testcase classname="IndexMinPriorityQueueTest" name="testItdecreasesKeyValuesBasedOnIndex" time="0"/>
   <testcase classname="IndexMinPriorityQueueTest" name="testIdentifyELementbyIndex" time="0"/>
-  <testcase classname="IndexMinPriorityQueueTest" name="testInitalStateIsEmpty" time="0"/>
+  <testcase classname="IndexMinPriorityQueueTest" name="testInitalStateIsEmpty" time="0.001"/>
   <testcase classname="IndexMinPriorityQueueTest" name="testReturnsAssociatedKeyValueBasedOnIndex" time="0"/>
   <testcase classname="IndexMinPriorityQueueTest" name="testDeletedMinElememnt" time="0"/>
   <testcase classname="IndexMinPriorityQueueTest" name="testAddsElementToQueue" time="0"/>
