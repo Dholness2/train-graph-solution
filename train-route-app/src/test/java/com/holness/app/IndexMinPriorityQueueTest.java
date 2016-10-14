@@ -27,7 +27,7 @@ public class IndexMinPriorityQueueTest {
 	  int index = 0;
 	  testPQ.insert(index, testKey);
 	  assertTrue(testPQ.contains(index));
-    }
+  }
 	
 	@Test
 	public void testAddsElementToQueue() {
@@ -83,5 +83,4 @@ public class IndexMinPriorityQueueTest {
 	}
 		
 	
-
 }

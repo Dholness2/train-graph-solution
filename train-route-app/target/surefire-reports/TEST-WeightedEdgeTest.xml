@@ -62,9 +62,9 @@
     <property name="ftp.nonProxyHosts" value="local|*.local|169.254/16|*.169.254/16"/>
     <property name="sun.cpu.isalist" value=""/>
   </properties>
-  <testcase classname="WeightedEdgeTest" name="testReturnStartPoint" time="0"/>
+  <testcase classname="WeightedEdgeTest" name="testReturnStartPoint" time="0.001"/>
   <testcase classname="WeightedEdgeTest" name="testReturnsWeightedState" time="0"/>
   <testcase classname="WeightedEdgeTest" name="testReturnEndPoint" time="0"/>
   <testcase classname="WeightedEdgeTest" name="testComparableToOtherEdges" time="0"/>
-  <testcase classname="WeightedEdgeTest" name="testReturnWeight" time="0.001"/>
+  <testcase classname="WeightedEdgeTest" name="testReturnWeight" time="0"/>
 </testsuite>

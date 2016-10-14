@@ -7,7 +7,7 @@ import com.holness.app.GraphShortestPath;
 import java.util.Map;
 
 public class TrainRouteReport {
-  
+
   private static final String SP = "shortestPaths";
   private static final String SP_CYCLES = "shortestPathCycles";
   private static final String ROUTES_DISTANCE = "routeDistances";
@@ -16,7 +16,7 @@ public class TrainRouteReport {
   private static final int START_INDEX = 0;
   private static final int END_INDEX = 1;
   private static final int DISTANCE_INDEX = 2;
-  
+
   private GraphAnalyzer analyzer;
   private GraphShortestPath sp;
 	private Map<String,String[]> config;

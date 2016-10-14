@@ -34,21 +34,21 @@ public class GraphAnalyzer {
 
 	}
 
-	public int pathCount(String startVertex, String endvertex, int stopLimit) {
+	public int pathCount(String startVertex, String endVertex, int vertexLimit) {
 		resetCount();
-		dfs(keyMap.get(startVertex), 0, keyMap.get(endvertex), stopLimit);
+		dfs(keyMap.get(startVertex), 0, keyMap.get(endVertex), vertexLimit);
 		return this.count;
 	}
 
-	public int pathCountExact(String startVertex, String endvertex, int length) {
+	public int pathCountExact(String startVertex, String endVertex, int length) {
 		resetCount();
-		dfsExact(keyMap.get(startVertex), 1, keyMap.get(endvertex), length);
+		dfsExact(keyMap.get(startVertex), 1, keyMap.get(endVertex), length);
 		return this.count;
 	}
 	
-	public int pathCountWeightLimit(String startVertex, String endvertex, int weightLimit) {
+	public int pathCountWeightLimit(String startVertex, String endVertex, int weightLimit) {
 		resetCount();
-    dfsExactWeight(keyMap.get(startVertex), keyMap.get(endvertex), weightLimit, 0);
+    dfsExactWeight(keyMap.get(startVertex), keyMap.get(endVertex), weightLimit, 0);
 		return this.count;
 	}
 	

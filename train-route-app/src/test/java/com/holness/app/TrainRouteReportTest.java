@@ -16,13 +16,11 @@ import org.junit.Before;
 import org.junit.Test;
 
 public class TrainRouteReportTest {
-	private TrainRouteReport testReport;
+	
+  private TrainRouteReport testReport;
 	private DisplayMock displayMock;
   private HashMap<String,Integer> vertexIndexes;
  
-
-
-
   private Map getConfig() {
     String routeDistances [] = {"A-B-C","A-D","A-D-C","A-E-B-C-D","A-E-D"};
     String [] routeCountDistancesMax = {"CC3"};

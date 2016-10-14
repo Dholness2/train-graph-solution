@@ -42,8 +42,8 @@ public class GraphParser {
 	private void parseEdges() throws Exception {
     this.edges = parseFileToString().split(",");
 		for (int index = 0; index < edges.length; index++) {
-			String first = String.valueOf(edges[index].charAt(START_POINT));
-			String second = String.valueOf(edges[index].charAt(END_POINT));
+			String first = edges[index].substring(START_POINT,END_POINT);
+			String second = edges[index].substring(END_POINT, WEIGHT);
 			int weight = Character.getNumericValue(edges[index].charAt(WEIGHT));
 			addKeys(vertexIndexes, first, second, index);
 			buildEdge(vertexIndexes.get(first), vertexIndexes.get(second), weight);

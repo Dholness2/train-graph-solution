@@ -12,12 +12,12 @@ import java.util.HashMap;
 public class App {
   
   public static final String DEFAULT_PATH  = "src/main/java/com/holness/app/SampleData.txt";
-	public static final	String routeDistances [] = {"A-B-C","A-D","A-D-C","A-E-B-C-D","A-E-D"};
-	public static final String [] routeCountDistancesMax = {"CC3"};
-	public static final String [] routeCountExactStops  = {"CC4"};
-	public static final String [] shortestPaths = {"AC"};
-	public static final String [] shortestPathCycles ={"BB"};
-  
+	public static String routeDistances [] = {"A-B-C","A-D","A-D-C","A-E-B-C-D","A-E-D"};
+	public static String [] routeCountDistancesMax = {"CC3"};
+	public static String [] routeCountExactStops = {"CC4"};
+	public static String [] shortestPaths = {"AC"};
+	public static String [] shortestPathCycles ={"BB"};
+
   public static void main( String[] args ) throws Exception {
 
     HashMap <String, String[]> reportConfig = new HashMap<String,String[]>();
