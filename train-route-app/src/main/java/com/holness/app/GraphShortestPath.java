@@ -21,21 +21,15 @@ public class GraphShortestPath {
     this.edgeTo = new WeightedEdge[graph.getVertexCount()];
   }
 
-  public int ShortestPathfromSourceToNode(String start, String end) {
+  public int ShortestPathFromSourceToNode(String start, String end) {
     this.source = indexKeys.get(start);
     buildDistanceQueue();
     return this.disTo[indexKeys.get(end)];
   }
 
-  public int ShortestPathfromSourceToNodeCycle(String start) {
+  public int ShortestPathFromSourceToNodeCycle(String start) {
     int nodeIndex = this.indexKeys.get(start);
-    int we = 0;
-    for (Edge edge : this.graph.getAdjacentList(nodeIndex)) {
-      int weight = new GraphShortestPath(this.graph).getDisTo(edge.getEndPoint(), nodeIndex);
-      int path = edge.getWeight() + weight;
-      we = Math.max(we, path);
-    }
-    return we;
+    return getDisToCycle(nodeIndex,nodeIndex);
   }
 
   public int getDisTo(int start, int end) {
@@ -44,9 +38,23 @@ public class GraphShortestPath {
     return this.disTo[end];
   }
 
+  public int getDisToCycle(int start, int end) {
+    this.source = start;
+    buildDistanceQueueCycle();
+    return this.disTo[end];
+  }
+
   private void buildDistanceQueue() {
     setDefaultDisVals();
     disTo[this.source] = 0;
+    this.pq = new IndexMinPriorityQueue<Integer>(this.graph.getVertexCount());
+    this.pq.insert(this.source, disTo[this.source]);
+    loadEdgesToQueue();
+  }
+
+
+  private void buildDistanceQueueCycle() {
+    setDefaultDisVals();
     this.pq = new IndexMinPriorityQueue<Integer>(this.graph.getVertexCount());
     this.pq.insert(this.source, disTo[this.source]);
     loadEdgesToQueue();
@@ -71,13 +79,25 @@ public class GraphShortestPath {
     int start = edge.getStartPoint();
     int end = edge.getEndPoint();
     if (disTo[end] > (disTo[start] + edge.getWeight())) {
-      disTo[end] = disTo[start] + edge.getWeight();
+      updateDistance(start, end, edge);
       edgeTo[end] = edge;
-      if (pq.contains(end)) {
+      updateQueue(end);
+    }
+  }
+
+  private void updateDistance(int start,int end,  Edge edge) {
+    if(disTo[start] == Integer.MAX_VALUE) {
+        disTo[end] = edge.getWeight();
+      } else {
+        disTo[end] = disTo[start] + edge.getWeight();
+      }
+  }
+
+  private void updateQueue(int end) {
+    if (pq.contains(end)) {
         pq.decreaseKey(end, disTo[end]);
       } else {
         pq.insert(end, disTo[end]);
       }
-    }
   }
 }
